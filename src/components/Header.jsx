@@ -1,12 +1,39 @@
+import { Container } from "react-bootstrap";
 import Navbar from "./Navbar";
+import { useSelector } from "react-redux";
 
 const Header = () => {
-    return(
-    <div className="header">
-        <h1 className="text-center">Product Builder</h1>
-        <Navbar/>
-    </div>
-    )
-}
+  const selectedSection = useSelector((state) => state.section.selectedSection);
+  const selectedCar = useSelector((state) => state.car.selectedCar);
+  let currentStep = 1
+
+  if (selectedCar) {
+    switch (selectedSection) {
+      case "colors":
+        currentStep = 2;
+        break;
+      case "accessories":
+        currentStep = 3;
+        break;
+      case "summary":
+        currentStep = 4;
+        break;
+      default:
+        currentStep = 1;
+    }
+  }
+  return (
+    <Container fluid className="header sticky-top">
+      <h1 className="text-center mainTitle d-none d-lg-block">
+        Product Builder
+      </h1>
+      <div className="d-flex justify-content-between d-lg-none mx-2">
+        <h1 className="mainTitle">Select model</h1>
+        <h4 className="d-flex align-self-center">Step {currentStep} of 4</h4>
+      </div>
+      <Navbar />
+    </Container>
+  );
+};
 
 export default Header;

@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 const Colors = () => {
   const selectedCar = useSelector((state) => state.car.selectedCar);
   const selectedColor = useSelector((state) => state.color.selectedColor);
-
   const dispatch = useDispatch()
   const tooltip = (color) => {
     return (
@@ -21,7 +20,7 @@ const Colors = () => {
     }
     console.log(selectedColor);
   return (
-    <Container>
+    <Container className="animationComponent">
       <Row className="d-flex flex-column mt-5">
         <Col xs={12} className=" d-flex justify-content-center">
           <img

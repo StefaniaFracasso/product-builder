@@ -4,6 +4,7 @@
         "name": "BMV i3",
         "initialPrice": 42400,
         "imageUrl": "/assets/product01_col01.jpg",
+        "description": "The BMW i3 is a compact electric vehicle known for its sustainable design and advanced features. It features a lightweight carbon fiber body, a spacious interior with sustainable materials, and an all-electric drivetrain that offers a respectable driving range. With its modern design and innovative technology, the BMW i3 delivers a unique and environmentally friendly driving experience.",
         "colors": [
             {
                 "id": "0",
@@ -50,6 +51,7 @@
         "name": "BMV i8",
         "initialPrice": 140700,
         "imageUrl": "/assets/product02_col01.jpg",
+        "description": "The BMW i8 is a captivating plug-in hybrid sports car known for its futuristic design, powerful performance, and advanced technology. With its striking exterior, luxurious interior, and hybrid drivetrain, the i8 offers an exhilarating and environmentally conscious driving experience.",
         "colors": [
             {
                 "id": "0",

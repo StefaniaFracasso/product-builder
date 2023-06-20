@@ -1,27 +1,24 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import data from '../data.json';
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { BsCheckLg } from 'react-icons/bs';
 
 const Cars = () => {
   const dispatch = useDispatch();
-  const [selectedCars, setSelectedCars] = useState([]);
+  const selectedCar = useSelector((state) => state.car.selectedCar);
 
   const handleClick = (product) => {
-    if (!selectedCars.includes(product)) {
-      dispatch({
-        type: 'ADD_SELECTION',
-        payload: product,
-      });
-      setSelectedCars([product]);
-    }
+    dispatch({
+      type: 'ADD_SELECTION',
+      payload: product,
+    });
   };
 
   return (
-    <Container className='mt-5'>
+    <Container className='mt-5 animationComponent'>
       <Row className='d-flex justify-content-around'>
         {Object.values(data).map((product) => {
-          const isSelected = selectedCars.includes(product);
+          const isSelected = product.id === selectedCar?.id;
           return (
             <Col
               xs={12}
@@ -32,10 +29,12 @@ const Cars = () => {
               }`}
               onClick={() => handleClick(product)}
             >
-              <p className='name'>{product.name}</p>
+              <h2 className='name'>{product.name}</h2>
               <img src={product.imageUrl} alt={product.name} className='carImage img-fluid' />
-              <h5>from {product.initialPrice}</h5>
-              <input type='radio' name='selectCar'></input>
+              <h5>from ${product.initialPrice}</h5>
+              <div className={`radioCircle ${isSelected ? 'radioSelected' : ''}`}>
+                {isSelected && <BsCheckLg />}
+              </div>
             </Col>
           );
         })}

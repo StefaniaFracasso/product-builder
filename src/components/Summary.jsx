@@ -9,29 +9,57 @@ const Summary = () => {
   );
 
   return (
-    <Container className="summaryContainer">
-      <Row className="d-flex flex-column text-center">
+    <Container className="summaryContainer animationComponent">
+      <Row className="d-flex flex-column text-center align-content-center">
         <Col>
-        <hr />
+          <hr />
           <h3>MODEL</h3>
-          <img src={selectedColor.image} alt={selectedCar.name} className="showCar" />
+          <img
+            src={
+              selectedColor.image ? selectedColor.image : selectedCar.imageUrl
+            }
+            alt={selectedCar.name}
+            className="showCar"
+          />
           <h2>{selectedCar.name}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime id
-            earum expedita molestias quo, numquam veritatis vitae iure alias
-            magni cumque esse saepe rem deserunt, ipsa, quasi quidem quae hic.
+            {selectedCar.description}
           </p>
           <hr />
           <h3>COLOR</h3>
-          <div className="d-flex justify-content-center"><div className="color" style={{ backgroundColor: selectedColor.hex }}></div><div className="d-flex align-self-center">{selectedColor.name} - ${selectedColor.price}</div></div>
+          <div className="d-flex justify-content-center">
+            <div
+              className="color"
+              style={{
+                backgroundColor: selectedColor.hex
+                  ? selectedColor.hex
+                  : selectedCar.colors[0].hex,
+              }}
+            ></div>
+            <div className="d-flex align-self-center">
+              {selectedColor.name
+                ? selectedColor.name
+                : selectedCar.colors[0].name}{" "}
+              - $
+              {selectedColor.price
+                ? selectedColor.price
+                : selectedCar.colors[0].price}
+            </div>
+          </div>
           <hr />
           <h3>ACCESSORIES</h3>
           <ul>
-            {selectedAccessories.map((accessory) => {
+            {selectedAccessories.length > 0 ? (
+              selectedAccessories.map((accessory) => {
                 return (
-                    <li>{accessory.name} - ${accessory.price}</li>
-                )
-            }) }
+                  <li>
+                    {accessory.name} - ${accessory.price}
+                  </li>
+                );
+              })
+            ) : (
+              <li>No accessories selected</li>
+            )}
           </ul>
         </Col>
       </Row>
