@@ -201,13 +201,6 @@ border: none !important;
   font-size: 18px !important;
 }
 
-.mobileFooter {
-  background-color: #ffbc1a;
-  color: white;
-  height: 4em;
-
-}
-
 /* animazioni  */
 
 @keyframes slideInFromLeft {
