@@ -58,6 +58,10 @@ const Footer = () => {
       };
     } else if (selectedSection === "summary") {
       buttonLabel = "BUY NOW";
+      handleButtonClick = () => {
+        alert("You have successfully built you car");
+        window.location.reload();
+      }
     }
 
     if (selectedColor && selectedColor.price) {
