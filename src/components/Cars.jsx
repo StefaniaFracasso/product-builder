@@ -15,7 +15,7 @@ const Cars = () => {
   };
 
   return (
-    <Container className="mt-5 animationComponent me-2 me-lg-0">
+    <Container className="mt-5 animationComponent">
       <Row className="d-flex justify-content-around">
         {Object.values(data).map((product) => {
           const isSelected = product.id === selectedCar?.id;

@@ -50,7 +50,7 @@ const Summary = () => {
             {selectedAccessories.length > 0 ? (
               selectedAccessories.map((accessory) => {
                 return (
-                  <li>
+                  <li key={accessory.id}>
                     {accessory.name} - ${accessory.price}
                   </li>
                 );

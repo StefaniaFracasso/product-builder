@@ -96,7 +96,7 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} lg={4} className="d-flex align-items-center mt-3">
+          <Col xs={12} lg={4} className="d-flex align-items-center">
             {backButtonVisible && (
               <Button onClick={backButtonHandler} className="backButton me-2">
                 <IoIosArrowBack />

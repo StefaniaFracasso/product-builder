@@ -36,7 +36,7 @@ const Colors = () => {
           <div className="d-flex justify-content-center mt-5">
             {selectedCar.colors.map((color) => {
               return (
-                <OverlayTrigger placement="top" overlay={tooltip(color)}>
+                <OverlayTrigger placement="top" overlay={tooltip(color)} key={color.id}>
                   <div
                     className="color"
                     style={{ backgroundColor: color.hex }}
