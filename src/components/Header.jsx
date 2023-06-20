@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const selectedSection = useSelector((state) => state.section.selectedSection);
   const selectedCar = useSelector((state) => state.car.selectedCar);
-  let currentStep = 1
+  let currentStep = 1;
 
   if (selectedCar) {
     switch (selectedSection) {

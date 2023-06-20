@@ -1,7 +1,7 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import data from '../data.json';
-import { useDispatch, useSelector } from 'react-redux';
-import { BsCheckLg } from 'react-icons/bs';
+import { Col, Container, Row } from "react-bootstrap";
+import data from "../data.json";
+import { useDispatch, useSelector } from "react-redux";
+import { BsCheckLg } from "react-icons/bs";
 
 const Cars = () => {
   const dispatch = useDispatch();
@@ -9,14 +9,14 @@ const Cars = () => {
 
   const handleClick = (product) => {
     dispatch({
-      type: 'ADD_SELECTION',
+      type: "ADD_SELECTION",
       payload: product,
     });
   };
 
   return (
-    <Container className='mt-5 animationComponent'>
-      <Row className='d-flex justify-content-around'>
+    <Container className="mt-5 animationComponent">
+      <Row className="d-flex justify-content-around">
         {Object.values(data).map((product) => {
           const isSelected = product.id === selectedCar?.id;
           return (
@@ -25,14 +25,20 @@ const Cars = () => {
               lg={5}
               key={product.id}
               className={`carContainer text-center mb-5 ${
-                isSelected ? 'selected' : ''
+                isSelected ? "selected" : ""
               }`}
               onClick={() => handleClick(product)}
             >
-              <h2 className='name'>{product.name}</h2>
-              <img src={product.imageUrl} alt={product.name} className='carImage img-fluid' />
+              <h2 className="name">{product.name}</h2>
+              <img
+                src={product.imageUrl}
+                alt={product.name}
+                className="carImage img-fluid"
+              />
               <h5>from ${product.initialPrice}</h5>
-              <div className={`radioCircle ${isSelected ? 'radioSelected' : ''}`}>
+              <div
+                className={`radioCircle ${isSelected ? "radioSelected" : ""}`}
+              >
                 {isSelected && <BsCheckLg />}
               </div>
             </Col>

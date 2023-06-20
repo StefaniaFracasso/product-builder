@@ -22,9 +22,7 @@ const Summary = () => {
             className="showCar"
           />
           <h2>{selectedCar.name}</h2>
-          <p>
-            {selectedCar.description}
-          </p>
+          <p>{selectedCar.description}</p>
           <hr />
           <h3>COLOR</h3>
           <div className="d-flex justify-content-center">

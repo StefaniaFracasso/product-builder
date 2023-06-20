@@ -1,4 +1,4 @@
-import {Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import SingleAccessory from "./SingleAccessory";
 
@@ -9,9 +9,7 @@ const Accessories = () => {
     <Container className="animationComponent">
       <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
         {selectedCar.accessories.map((accessory) => {
-          return (
-            <SingleAccessory accessory={accessory} id={accessory.id}/>
-          );
+          return <SingleAccessory accessory={accessory} id={accessory.id} />;
         })}
       </Row>
     </Container>
