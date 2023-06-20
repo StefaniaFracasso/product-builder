@@ -170,6 +170,21 @@ border: none !important;
   cursor: pointer;
 }
 
+.singleAccessorySelected {
+  border: 2px solid orange;
+  padding: 3em;
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.radioAccessorySelected {
+  background-color: orange;
+  transform: scale(2);
+  color: white;
+}
+
 /* footer */
 .footer {
   height: 8em;
