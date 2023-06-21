@@ -115,7 +115,7 @@ const Footer = () => {
               className="d-flex align-items-center justify-content-between justify-content-lg-end"
             >
               {backButtonVisible && (
-                <Button onClick={backButtonHandler} className="backButton me-2">
+                <Button onClick={backButtonHandler} className="backButton me-2 d-flex align-items-center">
                   <IoIosArrowBack />
                 </Button>
               )}

@@ -12,7 +12,7 @@ const Summary = () => {
     <Container className="summaryContainer animationComponent">
       <Row className="d-flex flex-column text-start text-lg-center align-content-center">
         <Col>
-          <hr />
+          <hr/>
           <h3>MODEL</h3>
           <img
             src={
@@ -23,9 +23,9 @@ const Summary = () => {
           />
           <h2>{selectedCar.name}</h2>
           <p>{selectedCar.description}</p>
-          <hr />
+          <hr/>
           <h3>COLOR</h3>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-start justify-content-lg-center">
             <div
               className="color"
               style={{
@@ -44,7 +44,7 @@ const Summary = () => {
                 : selectedCar.colors[0].price}
             </div>
           </div>
-          <hr />
+          <hr/>
           <h3>ACCESSORIES</h3>
           <ul>
             {selectedAccessories.length > 0 ? (
