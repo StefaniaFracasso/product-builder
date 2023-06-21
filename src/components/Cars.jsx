@@ -16,7 +16,7 @@ const Cars = () => {
 
   return (
     <Container className="mt-5 animationComponent">
-      <Row className="d-flex justify-content-around">
+      <div className="d-flex justify-content-around">
         {Object.values(data).map((product) => {
           const isSelected = product.id === selectedCar?.id;
           return (
@@ -44,7 +44,7 @@ const Cars = () => {
             </Col>
           );
         })}
-      </Row>
+      </div>
     </Container>
   );
 };

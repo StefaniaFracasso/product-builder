@@ -7,11 +7,11 @@ const Accessories = () => {
 
   return (
     <Container className="animationComponent">
-      <Row className="d-flex flex-column justify-content-center align-items-center mt-5">
+      <div className="d-flex flex-column justify-content-center align-items-center mt-5">
         {selectedCar.accessories.map((accessory) => {
           return <SingleAccessory accessory={accessory} key={accessory.id} />;
         })}
-      </Row>
+      </div>
     </Container>
   );
 };
