@@ -194,20 +194,23 @@ li:hover {
   background-color: white;
 }
 
-.sectionButton {
-  background-color: #ffbc1a !important;
-  padding: 20px 20px !important;
-  width: 200px;
+.sectionButton, .mobileSectionButton {
+  background-color: #ffbc1a;
   color: white !important;
+  border: none !important;
+}
+
+.sectionButton, .mobileSectionButton, .backButton, .mobileSectionButton {
+  border: none !important;
+  padding: 20px 20px !important;
+  font-size: 18px !important;
+}
+.sectionButton {
+  width: 200px;
 }
 
 .mobileSectionButton {
   width: 100%;
-  background-color: #ffbc1a !important;
-  padding: 20px 20px !important;
-  color: white !important;
-  border: none !important;
-  font-size: 18px !important;
 }
 
 .backButton {
@@ -216,17 +219,12 @@ li:hover {
   height: 60px;
   color: #637b87 !important;
   border-radius: 50% !important;
-  border: none !important;
-  font-size: 18px !important;
 }
 
 .mobileBackButton {
   width: 100%;
   background-color: white !important;
   color: black !important;
-  border: none !important;
-  padding: 20px 20px !important;
-  font-size: 18px !important;
 }
 
 .shadowMobileFooter {
