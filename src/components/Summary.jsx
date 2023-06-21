@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 const Summary = () => {
@@ -10,7 +10,7 @@ const Summary = () => {
 
   return (
     <Container className="summaryContainer animationComponent">
-      <Row className="d-flex flex-column text-start text-lg-center align-content-center">
+      <div className="d-flex flex-column text-start text-lg-center align-content-center">
         <Col>
           <hr/>
           <h3>MODEL</h3>
@@ -60,7 +60,7 @@ const Summary = () => {
             )}
           </ul>
         </Col>
-      </Row>
+      </div>
     </Container>
   );
 };

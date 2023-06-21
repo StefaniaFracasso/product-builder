@@ -1,4 +1,4 @@
-import { Col, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
+import { Col, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 
 const Colors = () => {
@@ -22,7 +22,7 @@ const Colors = () => {
   console.log(selectedColor);
   return (
     <Container className="animationComponent">
-      <Row className="d-flex flex-column mt-5">
+      <div className="d-flex flex-column mt-5">
         <Col xs={12} className=" d-flex justify-content-center">
           <img
             src={
@@ -47,7 +47,7 @@ const Colors = () => {
             })}
           </div>
         </Col>
-      </Row>
+      </div>
     </Container>
   );
 };

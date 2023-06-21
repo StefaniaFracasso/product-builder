@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import data from "../data.json";
 import { useDispatch, useSelector } from "react-redux";
 import { BsCheckLg } from "react-icons/bs";
