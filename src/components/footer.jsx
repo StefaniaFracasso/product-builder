@@ -91,7 +91,7 @@ const Footer = () => {
     return (
       <>
         <Container fluid className="fixed-bottom footer d-none d-lg-block">
-          <Row className="d-flex justify-content-between mt-3 mx-0 mx-lg-5">
+          <Row className="d-flex justify-content-between my-2 mx-0 mx-lg-5">
             <Col className="d-none d-lg-block" lg={3}>
               <div className="d-flex align-items-center selectedCar">
                 <img
