@@ -1,32 +1,4 @@
-/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-
-/* Global styles */
-:root {
-  --primary-color: #24221f;
-  --secondary-color: #5d7c89;
-}
-
-html,
-body {
-  background-color: #ffffff;
-  font-size: 80%;
-}
-
-a,
-li {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-}
 
 h1,
 h2,
@@ -43,13 +15,40 @@ button {
   color: #24221f;
 }
 
-/* Navbar */
+html,
+body {
+  background-color: #ffffff;
+  font-size: 80%;
+}
+
+a,
+li {
+  color: #5d7c89;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  width: 20px;
+  margin: 10px auto !important;
+}
+
+/* navbar */
+
 .custom-navbar {
   background-color: #ffffff;
 }
 
 .custom-nav-link {
-  color: var(--secondary-color);
+  color: #5d7c89;
   font-weight: bold !important;
   letter-spacing: 0.1em !important;
   font-family: "Lato", sans-serif !important;
@@ -62,12 +61,13 @@ button {
   text-decoration-thickness: 2px !important;
 }
 
-/* Product builder */
+/* product builder container */
+
 .product-builder {
   margin-bottom: 8em;
 }
 
-/* Header */
+/* header */
 .header {
   width: 30%;
   margin: 0px auto;
@@ -93,7 +93,7 @@ li:hover {
   color: #ffbc1a;
 }
 
-/* Car */
+/* car */
 .carContainer {
   border: 2px solid #ededed;
   padding: 3em;
@@ -146,7 +146,8 @@ li:hover {
   }
 }
 
-/* Colors */
+/* colors */
+
 .customTooltip > .tooltip-inner {
   background-color: #d1d1d1;
   border-radius: 5%;
@@ -160,7 +161,7 @@ li:hover {
   border: none !important;
 }
 
-/* Accessories */
+/* accessories */
 .singleAccessory {
   border: 2px solid #ededed;
   padding: 3em;
@@ -185,7 +186,7 @@ li:hover {
   color: white;
 }
 
-/* Footer */
+/* footer */
 .footer {
   height: 8em;
   border-bottom: 1px solid transparent;
@@ -193,25 +194,23 @@ li:hover {
   background-color: white;
 }
 
-.sectionButton,
-.mobileSectionButton {
+.sectionButton {
   background-color: #ffbc1a !important;
   padding: 20px 20px !important;
-  color: white !important;
-}
-
-.sectionButton {
   width: 200px;
+  color: white !important;
 }
 
 .mobileSectionButton {
   width: 100%;
+  background-color: #ffbc1a !important;
+  padding: 20px 20px !important;
+  color: white !important;
   border: none !important;
   font-size: 18px !important;
 }
 
-.backButton,
-.mobileBackButton {
+.backButton {
   background-color: #f2f2f2 !important;
   width: 60px;
   height: 60px;
@@ -235,8 +234,8 @@ li:hover {
   -moz-box-shadow: 0px -5px 28px -7px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -5px 28px -7px rgba(0, 0, 0, 0.3);
 }
+/* animazioni  */
 
-/* Animations */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -260,7 +259,6 @@ li:hover {
     opacity: 1;
   }
 }
-
 .animationComponent {
   animation: fadein 0.5s ease-in;
 }
