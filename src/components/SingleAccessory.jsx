@@ -11,7 +11,7 @@ const SingleAccessory = (props) => {
   );
   const dispatch = useDispatch();
 
-  const handleChangeCheckbox = (accessory) => {
+  const handleSelection = (accessory) => {
     const found = selectedAccessories.find(
       (existing) => existing.id === accessory.id
     );
@@ -41,11 +41,12 @@ const SingleAccessory = (props) => {
         isSelected ? "singleAccessorySelected" : ""
       }`}
       key={accessory.id}
+      onClick={() => handleSelection(accessory)}
     >
       <h2 className="mb-0">{accessory.name}</h2>
       <div className="d-flex align-items-center">
         <h2 className="me-3 mb-0">${accessory.price}</h2>
-        <div className={`radioCircle me-3 ${isChecked ? "radioAccessorySelected" : ""}`} onClick={() => handleChangeCheckbox(accessory)}>
+        <div className={`radioCircle me-3 ${isChecked ? "radioAccessorySelected" : ""}`}>
           {isSelected && <BsCheckLg />}
         </div>
       </div>
