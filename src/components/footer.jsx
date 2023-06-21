@@ -78,7 +78,7 @@ const Footer = () => {
 
     return (
       <Container fluid className="fixed-bottom footer">
-        <Row className="d-flex flex-row justify-content-between mt-4 mt-lg-0">
+        <Row className="d-flex flex-row justify-content-between mt-4 mt-lg-0 mx-0 mx-lg-5">
           <Col className="d-none d-lg-block" lg={3}>
             <div className="d-flex align-items-center selectedCar">
               <img
@@ -96,7 +96,7 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} lg={4} className="d-flex align-items-center">
+          <Col xs={12} lg={4} className="d-flex align-items-center justify-content-between justify-content-lg-end">
             {backButtonVisible && (
               <Button onClick={backButtonHandler} className="backButton me-2">
                 <IoIosArrowBack />
