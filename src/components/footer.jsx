@@ -70,7 +70,7 @@ const Footer = () => {
       backButtonHandler = () => {
         dispatch({
           type: "SELECT_SECTION",
-          payload: "accessory",
+          payload: "accessories",
         });
       };
 

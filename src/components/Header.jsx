@@ -28,7 +28,7 @@ const Header = () => {
         Product Builder
       </h1>
       <div className="d-flex justify-content-between d-lg-none mx-2">
-        <h4 className="mainTitle">Select model</h4>
+        <p className="mainTitle display-3 fw-bold">Select model</p>
         <h5 className="d-flex align-self-center">Step {currentStep} of 4</h5>
       </div>
       <Navbar />
