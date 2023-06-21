@@ -1,4 +1,4 @@
-import { Col, Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import data from "../data.json";
 import { useDispatch, useSelector } from "react-redux";
 import { BsCheckLg } from "react-icons/bs";
@@ -16,7 +16,7 @@ const Cars = () => {
 
   return (
     <Container className="mt-5 animationComponent">
-      <div className="d-flex justify-content-around">
+      <Row className="d-flex justify-content-around">
         {Object.values(data).map((product) => {
           const isSelected = product.id === selectedCar?.id;
           return (
@@ -44,7 +44,7 @@ const Cars = () => {
             </Col>
           );
         })}
-      </div>
+      </Row>
     </Container>
   );
 };
